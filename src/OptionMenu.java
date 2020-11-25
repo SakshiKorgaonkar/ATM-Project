@@ -1,6 +1,3 @@
-/* Main Class
-@Author Yu Lin - CSCI 185 - SPRING 2015 - ATM Project */
-
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.HashMap;
@@ -13,17 +10,12 @@ public class OptionMenu extends Account {
 
 	HashMap<Integer, Integer> data = new HashMap<Integer, Integer>();
 
-	/* Validate Login information customer number and pin number */
-
 	public void getLogin() throws IOException {
 		int x = 1;
 
 		do {
 			try {
-				/*
-				 * Accounts in a HashMap, key = customer number, value = pin
-				 * number
-				 */
+				
 				data.put(123456789, 1234);
 				data.put(123456780, 1230);
 
@@ -46,8 +38,6 @@ public class OptionMenu extends Account {
 			System.out.println("\n" + "Wrong Customer Number or Pin Number." + "\n");
 		} while (x == 1);
 	}
-
-	/* Display Account Type Menu with selection */
 
 	public void getAccountType() {
 		System.out.println("Select the Account you want to access: ");
@@ -76,8 +66,6 @@ public class OptionMenu extends Account {
 			getAccountType();
 		}
 	}
-
-	/* Display Checking Account Menu with selections */
 
 	public void getChecking() {
 		System.out.println("Checking Account: ");
@@ -114,8 +102,6 @@ public class OptionMenu extends Account {
 			getChecking();
 		}
 	}
-
-	/* Display Saving Account Menu with selections */
 
 	public void getSaving() {
 		System.out.println("Saving Account: ");
